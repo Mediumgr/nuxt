@@ -1,4 +1,4 @@
 <template>
-  <div>События</div>
+  <div>This is home page</div>
 </template>
 
