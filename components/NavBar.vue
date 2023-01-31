@@ -17,12 +17,33 @@
                         <li class="nav-item">
                             <nuxt-link active-class="active" no-prefetch class="nav-link" to="/about">About</nuxt-link>
                         </li>
+                        <li class="nav-item">
+                            <nuxt-link active-class="active" no-prefetch class="nav-link" to="/login">Login</nuxt-link>
+                        </li>
+                        <li v-if="isAuth" class="nav-item">
+                            <a class="nav-link" href="#" @click.prevent="logout">Logout</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 </template>
+
+<script>
+export default {
+  computed: {
+    isAuth() {
+      return this.$store.getters.isAuth
+    },
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch('logout')
+    },
+  },
+}
+</script>
 
 <style scoped>
 .brand {

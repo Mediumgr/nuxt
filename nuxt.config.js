@@ -15,9 +15,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/node_modules/bootstrap/dist/css/bootstrap.min.css',
-  ],
+  css: ['@/node_modules/bootstrap/dist/css/bootstrap.min.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -44,7 +42,6 @@ export default {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
   },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
